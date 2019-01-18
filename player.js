@@ -3,12 +3,22 @@
 let p1Name = "Jacob";
 
 let p1Stats = {
+  hp: 150
+  mp: 50 
+  atk: 100
+  def: 50
+  sp: 50
 
 }
 
 let p2Name = "Charlie";
 
 let p2Stats = {
+  hp: 25
+  mp: 175
+  atk:20
+  def:30
+  sp:150
 
 }
 
@@ -78,6 +88,8 @@ let physical = {
         else{
           return 4*bump;
         }
+
+        
 
  
 
