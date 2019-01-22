@@ -87,7 +87,49 @@ let physical = {
         }
         else{
           return 4*bump;
+        },
+        falconPunch: function(){
+          let baseDamage = this.stats.atk * 0.5;
+          let bonus = this.stats.atk * Math.random();
+          return baseDamage + bonus; 
+
+        },
+
+        roundhouseKick: function(){
+          let baseDamage = this.stats.atk * 0.5;
+          let tetradice = Math.random();
+          if(tetradice < 0.33){
+            return baseDamage;
+
+          }
+          else if (tetradice < 0.66){
+            return 2 * baseDamage;
+
+          }
+          else{
+            return 3 * baseDamage;
+
+          }
+
+        },
+        gohun: function(){
+          let bonus = 2 * this.stats.atk * Math.random();
+          return bonus;
+        },
+
+        hyperBeam : function(){
+          if(this.stats.mp >= 20){
+            this.stats.mp = this.stats.mp - 20;
+            let beam = this.stats.sp * 1.5;
+            return beam;
+          }
+
         }
+
+      }
+          
+
+
 
         
 
