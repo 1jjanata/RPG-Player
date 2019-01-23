@@ -54,7 +54,7 @@ let physical = {
   razorPunch: function(){
     let baseDamage = this.stats.atk*0.75 + 
     let bonus = 0.5*this.stats.atk*Math.randon(){
-      return baseDamage+bonus;
+      return baseDamage + bonus;
     },
     charge: function(){
       let pain = Math.random();
@@ -69,6 +69,27 @@ let physical = {
       }
     }
   }
+
+  gohun: function(){
+    let bonus = 2 * this.stats.atk * Math.random();
+    return bonus;
+  },
+
+  roundhouseKick: function(){
+    let baseDamage = this.stats.atk * 0.5;
+    let tetradice = Math.random();
+    if(tetradice < 0.33){
+      return baseDamage;
+
+    }
+    else if (tetradice < 0.66){
+      return 2 * baseDamage;
+
+    }
+    else{
+      return 3 * baseDamage;
+
+    }
 
   let magic = {
     hydroPump: function(){
@@ -87,34 +108,14 @@ let physical = {
         }
         else{
           return 4*bump;
-        },
+        }
+      }
+      },
         falconPunch: function(){
           let baseDamage = this.stats.atk * 0.5;
           let bonus = this.stats.atk * Math.random();
           return baseDamage + bonus; 
 
-        },
-
-        roundhouseKick: function(){
-          let baseDamage = this.stats.atk * 0.5;
-          let tetradice = Math.random();
-          if(tetradice < 0.33){
-            return baseDamage;
-
-          }
-          else if (tetradice < 0.66){
-            return 2 * baseDamage;
-
-          }
-          else{
-            return 3 * baseDamage;
-
-          }
-
-        },
-        gohun: function(){
-          let bonus = 2 * this.stats.atk * Math.random();
-          return bonus;
         },
 
         hyperBeam : function(){
@@ -127,6 +128,13 @@ let physical = {
         }
 
       }
+
+      let p1Moves = {
+
+      }
+
+
+      let player1
           
 
 
